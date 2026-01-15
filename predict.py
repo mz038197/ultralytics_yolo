@@ -141,7 +141,7 @@ def process_images(model, mode_name):
 def main():
     # 獲取用戶選擇
     mode_choice, source_choice = get_user_choice()
-    model_path = "yolo11n.pt"
+    model_path = "yolo26n.onnx"
     # model_path = "yolo11n-seg.pt"
 
     # 根據選擇載入模型

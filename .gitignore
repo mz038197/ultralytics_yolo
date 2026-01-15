@@ -1,5 +1,6 @@
 # PyTorch model files
 *.pt
+*.onnx
 
 # Training output directory
 runs/

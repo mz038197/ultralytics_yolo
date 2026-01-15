@@ -6,6 +6,15 @@ ultralytics>=8.0.0
 opencv-python>=4.8.0
 tqdm>=4.66.0
 
+# Deep Learning Frameworks
+tensorflow>=2.13.0
+tf-keras>=2.13.0
+
+# Model Conversion Tools
+onnx2tf>=1.18.0
+onnx_graphsurgeon>=0.4.1
+ai-edge-litert>=1.2.0
+
 # Optional: GUI backend for OpenCV (if needed)
 # opencv-python-headless>=4.8.0  # Use this for server environments without display
 

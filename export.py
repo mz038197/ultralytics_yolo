@@ -1,30 +1,8 @@
 from ultralytics import YOLO
 
 # Load a model
-model = YOLO("yolo26n.pt")  # load an official model
-model = YOLO("path/to/best.pt")  # load a custom-trained model
+model = YOLO("yolo11n.pt")  # load an official model
+# model = YOLO("path/to/best.pt")  # load a custom-trained model
 
 # Export the model
-model.export(format="tfjs") #"onnx"
-
-'''
-Format	format Argument	Model	Metadata	Arguments
-PyTorch	-	yolo26n.pt	✅	-
-TorchScript	torchscript	yolo26n.torchscript	✅	imgsz, half, dynamic, optimize, nms, batch, device
-ONNX	onnx	yolo26n.onnx	✅	imgsz, half, dynamic, simplify, opset, nms, batch, device
-OpenVINO	openvino	yolo26n_openvino_model/	✅	imgsz, half, dynamic, int8, nms, batch, data, fraction, device
-TensorRT	engine	yolo26n.engine	✅	imgsz, half, dynamic, simplify, workspace, int8, nms, batch, data, fraction, device
-CoreML	coreml	yolo26n.mlpackage	✅	imgsz, dynamic, half, int8, nms, batch, device
-TF SavedModel	saved_model	yolo26n_saved_model/	✅	imgsz, keras, int8, nms, batch, device
-TF GraphDef	pb	yolo26n.pb	❌	imgsz, batch, device
-TF Lite	tflite	yolo26n.tflite	✅	imgsz, half, int8, nms, batch, data, fraction, device
-TF Edge TPU	edgetpu	yolo26n_edgetpu.tflite	✅	imgsz, device
-TF.js	tfjs	yolo26n_web_model/	✅	imgsz, half, int8, nms, batch, device
-PaddlePaddle	paddle	yolo26n_paddle_model/	✅	imgsz, batch, device
-MNN	mnn	yolo26n.mnn	✅	imgsz, batch, int8, half, device
-NCNN	ncnn	yolo26n_ncnn_model/	✅	imgsz, half, batch, device
-IMX500	imx	yolo26n_imx_model/	✅	imgsz, int8, data, fraction, device
-RKNN	rknn	yolo26n_rknn_model/	✅	imgsz, batch, name, device
-ExecuTorch	executorch	yolo26n_executorch_model/	✅	imgsz, device
-Axelera	axelera	yolo26n_axelera_model/	✅	imgsz, int8, data, fraction, device
-'''
+model.export(format="onnx")
